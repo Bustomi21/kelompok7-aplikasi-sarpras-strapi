@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "data_barangs",
+  "info": {
+    "singularName": "data-barang",
+    "pluralName": "data-barangs",
+    "displayName": "databarang",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "kdbarang": {
+      "type": "string",
+      "unique": true
+    },
+    "barang": {
+      "type": "string"
+    },
+    "kondisi": {
+      "type": "string",
+      "unique": false
+    },
+    "status": {
+      "type": "string"
+    },
+    "keterangan": {
+      "type": "string"
+    },
+    "peminjamen": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::peminjaman.peminjaman",
+      "mappedBy": "databarang"
+    },
+    "jumlah": {
+      "type": "integer"
+    }
+  }
+}

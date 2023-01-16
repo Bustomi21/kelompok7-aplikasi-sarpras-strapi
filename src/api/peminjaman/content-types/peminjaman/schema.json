@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "peminjamen",
+  "info": {
+    "singularName": "peminjaman",
+    "pluralName": "peminjamen",
+    "displayName": "peminjaman",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "tanggalpinjam": {
+      "type": "date"
+    },
+    "namapeminjam": {
+      "type": "string"
+    },
+    "databarang": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::data-barang.data-barang",
+      "inversedBy": "peminjamen"
+    },
+    "tanggalkembali": {
+      "type": "date"
+    },
+    "statuss": {
+      "type": "string"
+    },
+    "namabarang": {
+      "type": "string"
+    },
+    "jumlah": {
+      "type": "biginteger"
+    }
+  }
+}
